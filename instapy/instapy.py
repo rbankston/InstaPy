@@ -30,7 +30,6 @@ except ModuleNotFoundError:
 from . import __version__
 from .constants import MEDIA_PHOTO
 from .constants import MEDIA_VIDEO
-from .clarifai_util import check_image
 from .comment_util import comment_image
 from .comment_util import get_comments_on_post
 from .comment_util import process_comments
@@ -232,17 +231,6 @@ class InstaPy:
         self.user_interact_percentage = 0
         self.user_interact_random = False
         self.dont_follow_inap_post = True
-
-        self.use_clarifai = False
-        self.clarifai_api_key = None
-        self.clarifai_models = []
-        self.clarifai_workflow = []
-        self.clarifai_probability = 0.50
-        self.clarifai_img_tags = []
-        self.clarifai_img_tags_skip = []
-        self.clarifai_full_match = False
-        self.clarifai_check_video = False
-        self.clarifai_proxy = None
 
         self.potency_ratio = None  # 1.3466
         self.delimit_by_numbers = None

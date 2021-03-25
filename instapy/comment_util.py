@@ -422,7 +422,6 @@ def verify_commented_image(browser, link, owner, logger):
 
 def process_comments(
     comments,
-    clarifai_comments,
     delimit_commenting,
     max_comments,
     min_comments,
@@ -464,8 +463,6 @@ def process_comments(
         logger.info(disapproval_reason)
         return False
 
-    if len(clarifai_comments) > 0:
-        selected_comments = clarifai_comments
 
     # smart commenting
     if comments and publish:
